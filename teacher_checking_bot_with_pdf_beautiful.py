@@ -28,7 +28,8 @@ OUTPUT_DIR = BASE_DIR / "generated"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "7971534785:AAG463XSpjLe8v1XkrAC2QQOayO9K6Cs2js")
-
+storage = MemoryStorage()
+dp = Dispatcher(storage=storage)
 logging.basicConfig(level=logging.INFO)
 
 
