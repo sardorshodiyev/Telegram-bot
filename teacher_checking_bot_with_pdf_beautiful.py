@@ -662,9 +662,20 @@ async def fallback(message: Message):
     await message.answer("Buyruqni menyudan tanlang. /start bosib bosh menyuga qaytishingiz mumkin.")
 
 
+import asyncio
+from aiogram import Bot
+
 async def main():
-    if BOT_TOKEN == "PASTE_YOUR_TOKEN_HERE":
-        raise RuntimeError("BOT_TOKEN ni environment variable ga qo'ying yoki kod ichida almashtiring.")
+    # TOKEN tekshirish
+    if BOT_TOKEN == "7971534785:AAG463XSpjLe8v1XkrAC2QQOayO9K6Cs2js":
+        raise RuntimeError("BOT_TOKEN ni Render'da Environment Variables ga qo'ying.")
+
+    # Bot yaratish
+    bot = Bot(token=BOT_TOKEN)
+
+    print("Bot ishga tushdi...")
+
+    # Polling boshlash
     await dp.start_polling(bot)
 
 
